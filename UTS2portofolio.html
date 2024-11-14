@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            scroll-behavior: smooth;
+        }
+
+        /* Styling Header dan Nav Tetap di Atas */
+        header {
+            background: linear-gradient(135deg, #333, #4CAF50);
+            color: #fff;
+            text-align: center;
+            padding: 4rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        header .hero {
+            position: relative;
+        }
+        header img.profil {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; 
+            border: 3px solid white;
+            margin-bottom: 1rem;
+            object-fit: cover; 
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #4CAF50;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 6rem 1rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            color: #eee;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Styling untuk Section */
+        section {
+            padding: 2rem 1rem;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        #about, #projects, #contact {
+            background: #fff;
+            margin-top: 1rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #333;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #4CAF50;
+            margin: 0.5rem auto 0;
+        }
+
+        .project-item {
+            background: #e0e0e0;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .project-item:hover {
+            transform: scale(1.05);
+        }
+
+        .project-item img {
+            width: 100%;
+            max-width: 100px;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: #fff;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: #333;
+            text-decoration: none;
+            margin-right: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #4CAF50;
+        }
+
+        /* Responsivitas */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Nav Tetap di Atas -->
+    <nav>
+        <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#about">Tentang Saya</a></li>
+            <li><a href="#projects">Proyek</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header dan Hero -->
+    <header id="home">
+        <div class="hero">
+            <img src="potoprofil.jpeg" alt="Foto Profil Ihsan Nafis Hidayat" class="profil">
+            <h1>Ihsan Nafis Hidayat</h1>
+            <p>Web Developer | UI/UX Designer</p>
+        </div>
+    </header>
+
+    <!-- About Me -->
+    <section id="about">
+        <h2>Tentang Saya</h2>
+        <p>Saya adalah seorang web developer dengan keahlian di bidang front-end. Kemampuan saya meliputi HTML, CSS, JavaScript.
+             Saya memiliki pengalaman bekerja dalam proyek kolaboratif untuk menciptakan aplikasi web yang user-friendly.</p>
+        <p>Saya suka mendesain tampilan antarmuka yang sederhana dan efektif. Tujuan saya adalah berkontribusi dalam proyek yang berdampak positif bagi masyarakat dan lingkungan.</p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-item">
+            <h3>WordPress</h3>
+            <img src="wordpress.png" alt="Gambar Proyek WordPress">
+            <p>WebSite Artikel (KTI Semester 1).</p>
+        </div>
+        <div class="project-item">
+            <h3>Presstashop</h3>
+            <img src="prestashop.jpg" alt="Gambar Proyek Presstashop">
+            <p>E-Commerce Presstashop (E-Commerce Semester 2).</p>
+        </div>
+        <div class="project-item">
+            <h3>Figma</h3>
+            <img src="figma.jpg" alt="Gambar Proyek Figma">
+            <p>Prototype UI/UX Desain (IMK Semester 2).</p>
+        </div>
+    </section>
+
+    <!-- Contact Me -->
+    <section id="contact">
+        <h2>Kontak</h2>
+        <p>Anda dapat menghubungi saya melalui media sosial atau email di bawah ini:</p>
+        <div class="social-links">
+            <ul>
+                <li>Phone: <a href="tel:087735490222">087735490222</a></li>
+                <li>Email: <a href="mailto:ihsannafishidayat@gmail.com">ihsannafishidayat@gmail.com</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/ihsan-nafis-hidayat-4a3334274/" target="_blank">Ihsan Nafis Hidayat</a></li>
+                <li>GitHub: <a href="https://github.com/IhsanNafis123" target="_blank">IhsanNafis123</a></li>
+                <li>Instagram: <a href="https://www.instagram.com/ihsannfs/" target="_blank">ihsannfs</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Ihsan Nafis Hidayat. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <button id="scrollToTopBtn" style="position: fixed; bottom: 20px; right: 20px; display: none; background-color: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 5px;"> </button>
+    
+    <script>
+        // Tombol scroll ke atas muncul saat halaman discroll
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                scrollToTopBtn.style.display = 'block'; // Menampilkan tombol
+            } else {
+                scrollToTopBtn.style.display = 'none'; // Menyembunyikan tombol
+            }
+        });
+    
+        // Scroll ke atas saat tombol diklik
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Efek scroll halus
+            });
+        });
+    </script>
+    
+</body>
+</html>

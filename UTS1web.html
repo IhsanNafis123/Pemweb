@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pertanian Indonesia</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f3f4ed;
+      color: #333;
+    }
+
+    header {
+      background: url('pertanian.png') no-repeat center/cover;
+      color: white;
+      text-align: center;
+      padding: 4em 0;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    nav {
+      background-color: #4CAF50;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    nav ul li a:hover {
+      background-color: #3a7f3c;
+    }
+
+    main {
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    section {
+      width: 100%;
+      max-width: 800px;
+      margin-bottom: 2em;
+      background: rgb(255, 255, 255);
+      padding: 2em;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #4CAF50;
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 1em;
+      line-height: 1.8;
+    }
+
+    footer {
+      background-color: #333;
+      color: rgb(123, 197, 219);
+      text-align: center;
+      padding: 1.5em;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    form {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 20px;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"], input[type="number"], select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .contact-info a {
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Pertanian Modern Indonesia</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#content">Content</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="home">
+      <h2>Selamat Datang di Pertanian Indonesia</h2>
+      <p>Website ini didedikasikan untuk memberikan informasi terkini mengenai dunia pertanian modern di Indonesia. Kami bertujuan untuk meningkatkan kesadaran masyarakat tentang pentingnya teknologi dalam pertanian serta memberikan akses ke berbagai informasi terkait praktik dan inovasi di bidang ini.</p>
+       </section>
+
+    <section id="content">
+      <h2>Produk dan Layanan Kami</h2>
+      <div>
+        <img src="pupuk.jpg" alt="Produk Pertanian">
+      </div>
+      <p>Berikut adalah beberapa produk pertanian yang kami tawarkan untuk membantu meningkatkan hasil pertanian di Indonesia. Kami menyediakan peralatan, benih, dan pupuk terbaik untuk mendukung petani dalam mengolah tanah dan meningkatkan hasil panen.</p>
+
+      <h3>Tabel Produk Pertanian</h3>
+      <table>
+        <tr>
+          <th>Nama Produk</th>
+          <th>Deskripsi</th>
+          <th>Harga</th>
+        </tr>
+        <tr>
+          <td>Traktor Modern</td>
+          <td>Traktor berteknologi tinggi yang membantu petani dalam mengolah lahan dengan lebih cepat dan efisien.</td>
+          <td>Rp 75.000.000</td>
+        </tr>
+        <tr>
+          <td>Pupuk Organik</td>
+          <td>Pupuk ramah lingkungan yang memberikan nutrisi pada tanaman tanpa merusak kualitas tanah.</td>
+          <td>Rp 150.000</td>
+        </tr>
+        <tr>
+          <td>Benih Padi Unggul</td>
+          <td>Benih padi dengan kualitas terbaik yang cocok untuk berbagai kondisi tanah di Indonesia.</td>
+          <td>Rp 50.000</td>
+        </tr>
+      </table>
+      <!-- javascript -->
+      <h3>Form Pemesanan</h3>
+      <form onsubmit="handleSubmit(event)">
+        <label for="name">Nama:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="product">Produk:</label><br>
+        <select id="product" name="product">
+          <option value="traktor">Traktor Modern</option>
+          <option value="pupuk">Pupuk Organik</option>
+          <option value="benih">Benih Padi Unggul</option>
+        </select><br><br>
+        
+        <label for="quantity">Jumlah:</label><br>
+        <input type="number" id="quantity" name="quantity" required><br><br>
+        
+        <input type="submit" value="Pesan Sekarang">
+      </form>
+      <p id="orderMessage" style="margin-top: 10px;"></p>
+    </section>
+
+    <section id="about">
+      <h2>Hubungi Kami</h2>
+      <p>Jika Anda memiliki pertanyaan atau ingin bekerja sama, silakan hubungi kami melalui kontak berikut:</p>
+      <ul class="contact-info">
+        <li>Email: <a href="mailto:info@pertanianindonesia.com">info@pertanianindonesia.com</a></li>
+        <li>Telepon: +62 123-456-7890</li>
+        <li>Instagram: <a href="https://www.instagram.com/kementerianpertanian/">@pertanianindonesia</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Pertanian Indonesia. Semua Hak Dilindungi.</p>
+  </footer>
+
+</body>
+</html>
